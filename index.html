@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ホテル運営実績｜和志商事株式会社【公式】</title>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;600&family=Noto+Sans+JP:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1b365d; /* 信頼感を表す高貴なロイヤルネイビー */
+    --primary-light: #f4f7fa; /* 爽やかな超淡いブルーグレー */
+    --gold: #c9a96e; /* 成功・高収益を表すシャンパンゴールド */
+    --accent: #e29b7a; /* 親しみやすさを与えるテラコッタ */
+    --bg-light: #fdfcf7; /* 明るく清潔感のあるベース背景 */
+    --bg-white: #ffffff;
+    --text-dark: #3a3530; /* 優しいダークブラウン（真っ黒を避けて洗練された印象に） */
+    --text-muted: #8c827a;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--bg-light);
+    color: var(--text-dark);
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    line-height: 1.7;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 16px 40px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 4px 20px rgba(27, 54, 93, 0.05);
+  }
+  .nav-logo {
+    font-size: 1.15rem; font-weight: 700; letter-spacing: .05em; color: var(--primary);
+  }
+  .nav-links { display: flex; gap: 28px; list-style: none; }
+  .nav-links a {
+    font-size: .85rem; font-weight: 500; letter-spacing: .05em; color: var(--text-dark);
+    text-decoration: none; transition: color .3s;
+  }
+  .nav-links a:hover { color: var(--gold); }
+  .nav-btn {
+    background: var(--primary); color: #fff; padding: 8px 20px; border-radius: 4px;
+    font-size: .8rem; font-weight: 700; text-decoration: none; transition: background .3s;
+  }
+  .nav-btn:hover { background: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    min-height: 50vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    position: relative;
+    background: linear-gradient(135deg, #f4f7fa 0%, #e9eff5 100%);
+    text-align: center;
+    padding: 140px 24px 60px;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute; inset: 0;
+    background: radial-gradient(circle at 80% 20%, rgba(201,169,110,.1) 0%, transparent 50%);
+    pointer-events: none;
+  }
+  .hero-label {
+    font-size: .8rem; font-weight: 700; letter-spacing: .2em; color: var(--gold);
+    text-transform: uppercase; margin-bottom: 16px;
+  }
+  .hero-title {
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-weight: 700; letter-spacing: .05em; color: var(--primary);
+    line-height: 1.4;
+  }
+  .hero-sub {
+    font-size: clamp(0.95rem, 1.5vw, 1.1rem);
+    font-weight: 400; color: var(--text-muted); letter-spacing: .05em;
+    margin-top: 16px; max-width: 800px;
+  }
+
+  /* ── SECTION CORE STYLE ── */
+  section { padding: 90px 24px; }
+  .section-label {
+    font-size: .75rem; font-weight: 700; letter-spacing: .2em;
+    text-transform: uppercase; color: var(--gold);
+    display: block; margin-bottom: 12px; text-align: center;
+  }
+  .section-title {
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 700; letter-spacing: .05em; line-height: 1.3;
+    color: var(--primary); text-align: center; margin-bottom: 48px;
+  }
+  .container { max-width: 1100px; margin: 0 auto; }
+
+  /* ── PHILOSOPHY（運営方針） ── */
+  #philosophy { background: var(--bg-white); }
+  .philosophy-card {
+    background: var(--bg-light); border-radius: 16px; padding: 48px;
+    border: 1px solid rgba(27, 54, 93, 0.05);
+    box-shadow: 0 10px 30px rgba(27, 54, 93, 0.02);
+  }
+  .philosophy-text-lead {
+    font-size: 1.2rem; font-weight: 700; color: var(--primary);
+    line-height: 1.6; margin-bottom: 24px; text-align: center;
+  }
+  .philosophy-text-body {
+    font-size: .95rem; color: var(--text-dark); line-height: 1.9;
+    max-width: 850px; margin: 0 auto;
+  }
+
+  /* ── STRENGTH（強み・特徴） ── */
+  #strength { background: var(--bg-light); }
+  .strength-grid {
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 32px;
+  }
+  .strength-card {
+    background: var(--bg-white); padding: 40px 32px; border-radius: 12px;
+    border: 1px solid rgba(201,169,110,0.15);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+  }
+  .strength-num {
+    font-family: 'Comfortaa', cursive; font-size: 1.5rem; font-weight: 600;
+    color: var(--gold); margin-bottom: 16px; display: block;
+  }
+  .strength-card h3 { font-size: 1.1rem; font-weight: 700; color: var(--primary); margin-bottom: 12px; }
+  .strength-card p { font-size: .88rem; color: var(--text-muted); }
+
+  /* ── HOTELS（運営ホテル紹介） ── */
+  #hotels { background: var(--bg-white); }
+  .hotels-intro {
+    text-align: center; font-size: 1.05rem; font-weight: 500; color: var(--text-dark);
+    margin-bottom: 40px; background: var(--primary-light);
+    padding: 16px 24px; border-radius: 8px; display: inline-block;
+    left: 50%; transform: translateX(-50%); position: relative;
+  }
+  .hotels-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; margin-top: 20px;
+  }
+  @media (max-width: 900px) {
+    .hotels-grid { grid-template-columns: 1fr; }
+    .hotels-intro { display: block; left: 0; transform: none; }
+  }
+  .hotel-card {
+    background: var(--bg-light); border-radius: 16px; overflow: hidden;
+    border: 1px solid rgba(160, 150, 140, 0.1);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.02);
+    display: flex; flex-direction: column;
+  }
+  .hotel-img-wrap {
+    position: relative; width: 100%; height: 210px; background: #eadecc;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .hotel-img-placeholder {
+    font-size: .85rem; font-weight: 500; color: var(--text-muted); text-align: center; padding: 20px;
+  }
+  .hotel-img-wrap img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .hotel-info { padding: 24px; flex-grow: 1; display: flex; flex-direction: column; justify-content: space-between; }
+  .hotel-tag {
+    font-size: .7rem; font-weight: 700; color: var(--gold); letter-spacing: .05em;
+    text-transform: uppercase; margin-bottom: 6px; display: block;
+  }
+  .hotel-name { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
+  .hotel-loc { font-size: .82rem; color: var(--text-muted); font-weight: 500; }
+
+  /* ── CTA ── */
+  .cta-band {
+    padding: 80px 24px; text-align: center;
+    background: linear-gradient(135deg, #1b365d 0%, #11223b 100%);
+    color: #fff;
+  }
+  .cta-band h2 { font-size: clamp(1.5rem, 3vw, 2.2rem); font-weight: 700; margin-bottom: 12px; }
+  .cta-band p { font-size: .95rem; opacity: 0.8; margin-bottom: 32px; }
+  .cta-link {
+    display: inline-block; padding: 14px 36px; background: var(--gold); color: #fff;
+    text-decoration: none; border-radius: 4px; font-size: .9rem; font-weight: 700;
+    box-shadow: 0 4px 15px rgba(201,169,110,0.3); transition: opacity .3s;
+  }
+  .cta-link:hover { opacity: 0.9; }
+
+  /* ── FOOTER ── */
+  footer {
+    background: #0f1e33; padding: 32px 24px; text-align: center; color: rgba(255,255,255,0.6);
+    font-size: .75rem; border-top: 1px solid rgba(255,255,255,0.05);
+  }
+  footer p { margin-top: 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 768px) {
+    nav { padding: 12px 20px; }
+    .nav-links { display: none; }
+    section { padding: 70px 20px; }
+    .philosophy-card { padding: 32px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-logo">和志商事株式会社</div>
+  <ul class="nav-links">
+    <li><a href="#philosophy">運営方針</a></li>
+    <li><a href="#strength">当社の強み</a></li>
+    <li><a href="#hotels">運営実績</a></li>
+  </ul>
+  <a href="#contact" class="nav-btn">お問い合わせ</a>
+</nav>
+
+<section class="hero">
+  <span class="hero-label">Hotel Management Portfolio</span>
+  <h1 class="hero-title">市場に合わせた最適なプランで<br>高収益・高稼働なホテル運営を。</h1>
+  <p class="hero-sub">
+    和志商事株式会社では、豊富なノウハウを活かしたラブホテル・ビジネスホテルの運営管理を行っております。
+  </p>
+</section>
+
+<section id="philosophy">
+  <div class="container">
+    <span class="section-label">Philosophy</span>
+    <h2 class="section-title">ホテル運営実績</h2>
+    
+    <div class="philosophy-card">
+      <p class="philosophy-text-lead">
+        ブランドの形にとらわれず、その「土地・市場」に最も適した運営を。
+      </p>
+      <p class="philosophy-text-body">
+        和志商事株式会社では、レジャーホテル（ラブホテル）およびビジネスホテルの高品質な運営管理を行っております。<br><br>
+        私たちは、画一的なホテル名のブランド統一にはあえてこだわリません。それぞれの地域特性、ターゲット層、そして市場ニーズを徹底的に分析し、そのホテルが持つ本来のポテンシャルを最大限に引き出す手法を選択することで、安定した**高収益および高稼働**を達成しております。
+      </p>
+    </div>
+  </div>
+</section>
+
+<section id="strength">
+  <div class="container">
+    <span class="section-label">Our Strength</span>
+    <h2 class="section-title">時代に選ばれる臨機応変な対応力</h2>
+    
+    <div class="strength-grid">
+      <div class="strength-card">
+        <span class="strength-num">01</span>
+        <h3>前年稼働の徹底維持</h3>
+        <p>近年、ホテル供給の飽和化に伴い、業界全体で客単価や集客率の低下が懸念されています。しかし当社では、緻密なマーケティングと迅速な舵取りにより、いかなる市場変化にも臨機応変に対応。安定して前年稼働を維持し続ける強い基盤を構築しています。</p>
+      </div>
+
+      <div class="strength-card">
+        <span class="strength-num">02</span>
+        <h3>個別最適化マネジメント</h3>
+        <p>ホテルの名称や一律のルールで縛るのではなく、各店舗の「現場」に根ざした戦略を重視。ローカルエリアの競合店分析からユーザーの隠れたニーズまでを的確に吸い上げ、利益を最大化へと導きます。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="hotels">
+  <div class="container">
+    <span class="section-label">Management Performance</span>
+    <h2 class="section-title">運営ホテルの一部ご紹介</h2>
+    
+    <div class="hotels-intro">
+      おかげさまで、現在では約3店舗のホテル様のお手伝いをさせていただいております。
+    </div>
+
+    <div class="hotels-grid">
+      <div class="hotel-card">
+        <div class="hotel-img-wrap">
+          <img src="65712a1d-5405-4310-b1d5-729a7f78d103.png" alt="セイントステラ" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
+          <div class="hotel-img-placeholder" style="display:none;">📸 SAINT STELLA<br><span style="font-size:0.7rem; color:var(--text-muted);">（画像差し替え可能）</span></div>
+        </div>
+        <div class="hotel-info">
+          <div>
+            <span class="hotel-tag">実績 ①</span>
+            <h3 class="hotel-name">セイントステラ</h3>
+          </div>
+          <p class="hotel-loc">📍 奈良県橿原市</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-img-wrap">
+          <div class="hotel-img-placeholder">📸 VILLA (奈良)<br><span style="font-size:0.7rem; color:var(--text-muted);">（画像差し替え可能）</span></div>
+        </div>
+        <div class="hotel-info">
+          <div>
+            <span class="hotel-tag">実績 ②</span>
+            <h3 class="hotel-name">ホテルヴィラ</h3>
+          </div>
+          <p class="hotel-loc">📍 奈良県大和高田市</p>
+        </div>
+      </div>
+
+      <div class="hotel-card">
+        <div class="hotel-img-wrap">
+          <div class="hotel-img-placeholder">📸 VILLA (鳥取)<br><span style="font-size:0.7rem; color:var(--text-muted);">（画像差し替え可能）</span></div>
+        </div>
+        <div class="hotel-info">
+          <div>
+            <span class="hotel-tag">実績 ③</span>
+            <h3 class="hotel-name">ホテルヴィラ</h3>
+          </div>
+          <p class="hotel-loc">📍 鳥取県鳥取市</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="cta-band" id="contact">
+  <h2>ホテル経営・運営管理のご相談</h2>
+  <p>稼働率の改善、リニューアル、管理代行など、まずはお気軽にお問い合わせください。</p>
+  <a href="mailto:info@washi-shoji.co.jp" class="cta-link">和志商事に相談する</a>
+</div>
+
+<footer>
+  <div class="footer-logo">和志商事株式会社</div>
+  <p>© 和志商事株式会社. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
