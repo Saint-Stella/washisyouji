@@ -170,6 +170,29 @@
   .hotel-name { font-size: 1.15rem; font-weight: 700; color: var(--primary); margin-bottom: 8px; }
   .hotel-loc { font-size: .82rem; color: var(--text-muted); font-weight: 500; }
 
+  /* ── COMPANY PROFILE（会社概要） ── */
+  #company { background: var(--bg-light); }
+  .company-layout {
+    background: var(--bg-white); border-radius: 16px; padding: 40px;
+    border: 1px solid rgba(27, 54, 93, 0.05);
+    box-shadow: 0 4px 20px rgba(0,0,0,0.01);
+    max-width: 850px; margin: 0 auto;
+  }
+  .company-list { display: grid; grid-template-columns: 200px 1fr; gap: 20px 0; }
+  .company-list dt {
+    font-size: .9rem; font-weight: 700; color: var(--primary);
+    border-left: 3px solid var(--gold); padding-left: 10px;
+  }
+  .company-list dd { font-size: .9rem; color: var(--text-dark); padding-left: 10px; }
+  .company-tel-link {
+    color: var(--accent); font-weight: 700; text-decoration: none; font-size: 1.1rem;
+  }
+  @media (max-width: 600px) {
+    .company-list { grid-template-columns: 1fr; gap: 8px 0; }
+    .company-list dt { border-left: none; border-bottom: 1px solid var(--primary-light); padding: 4px 0; }
+    .company-list dd { padding-left: 0; margin-bottom: 16px; }
+  }
+
   /* ── CTA ── */
   .cta-band {
     padding: 80px 24px; text-align: center;
@@ -209,6 +232,7 @@
     <li><a href="#philosophy">運営方針</a></li>
     <li><a href="#strength">当社の強み</a></li>
     <li><a href="#hotels">運営実績</a></li>
+    <li><a href="#company">会社概要</a></li>
   </ul>
   <a href="#contact" class="nav-btn">お問い合わせ</a>
 </nav>
@@ -232,7 +256,7 @@
       </p>
       <p class="philosophy-text-body">
         和志商事株式会社では、レジャーホテル（ラブホテル）およびビジネスホテルの高品質な運営管理を行っております。<br><br>
-        私たちは、画一的なホテル名のブランド統一にはあえてこだわリません。それぞれの地域特性、ターゲット層、そして市場ニーズを徹底的に分析し、そのホテルが持つ本来のポテンシャルを最大限に引き出す手法を選択することで、安定した**高収益および高稼働**を達成しております。
+        私たちは、画一的なホテル名のブランド統一にはあえてこだわリません。それぞれの地域特性、ターゲット層、精度、そして市場ニーズを徹底的に分析し、そのホテルが持つ本来のポテンシャルを最大限に引き出す手法を選択することで、安定した**高収益および高稼働**を達成しております。
       </p>
     </div>
   </div>
@@ -271,8 +295,7 @@
     <div class="hotels-grid">
       <div class="hotel-card">
         <div class="hotel-img-wrap">
-          <img src="65712a1d-5405-4310-b1d5-729a7f78d103.png" alt="セイントステラ" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
-          <div class="hotel-img-placeholder" style="display:none;">📸 SAINT STELLA<br><span style="font-size:0.7rem; color:var(--text-muted);">（画像差し替え可能）</span></div>
+          <img src="65712a1d-5405-4310-b1d5-729a7f78d103.png" alt="セイントステラ 奈良県橿原市" onerror="this.style.display='none';this.nextElementSibling.style.display='block'">
         </div>
         <div class="hotel-info">
           <div>
@@ -285,7 +308,7 @@
 
       <div class="hotel-card">
         <div class="hotel-img-wrap">
-          <div class="hotel-img-placeholder">📸 VILLA (奈良)<br><span style="font-size:0.7rem; color:var(--text-muted);">（画像差し替え可能）</span></div>
+          <img src="fa46dbb7-fd74-40fc-928c-e3a458ab6cd3.png" alt="ホテルヴィラ 奈良県大和高田市">
         </div>
         <div class="hotel-info">
           <div>
@@ -298,7 +321,7 @@
 
       <div class="hotel-card">
         <div class="hotel-img-wrap">
-          <div class="hotel-img-placeholder">📸 VILLA (鳥取)<br><span style="font-size:0.7rem; color:var(--text-muted);">（画像差し替え可能）</span></div>
+         <img src="exterior.jpg" alt="ホテルヴィラ 鳥取店">
         </div>
         <div class="hotel-info">
           <div>
@@ -312,10 +335,30 @@
   </div>
 </section>
 
+<section id="company">
+  <div class="container">
+    <span class="section-label">Company Profile</span>
+    <h2 class="section-title">会社概要</h2>
+    
+    <div class="company-layout">
+      <dl class="company-list">
+        <dt>会社名</dt>
+        <dd>和志商事株式会社</dd>
+        
+        <dt>所在地</dt>
+        <dd>〒590-0061<br>大阪府堺市堺区翁橋町１丁９−１７ グレイス堺1F</dd>
+        
+        <dt>お電話・お問い合わせ</dt>
+        <dd><a href="tel:07084206813" class="company-tel-link">TEL：070-8420-6813</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
 <div class="cta-band" id="contact">
   <h2>ホテル経営・運営管理のご相談</h2>
   <p>稼働率の改善、リニューアル、管理代行など、まずはお気軽にお問い合わせください。</p>
-  <a href="mailto:info@washi-shoji.co.jp" class="cta-link">和志商事に相談する</a>
+  <a href="tel:07084206813" class="cta-link">お電話で相談する</a>
 </div>
 
 <footer>
